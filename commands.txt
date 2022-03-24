@@ -1,0 +1,53 @@
+
+
+
+
+
+
+Pen Testing
+
+#ICMP Scan to see if host machine responds to Ping
+
+nmap -PE xxx.xxx.xxx.xxx
+
+#Perform a XMAS scan on the first 999 ports
+
+nmap -p 1-999 -sX xxx.xxx.xxx.xxx -Pn -vv
+
+#Perform a TCP SYN scan on the first 5000 ports
+
+nmap -p1-5000 -sS xxx.xxx.xxx.xxx -Pn -vv
+
+
+nmap --script=ftp-anon -p 21 xxx.xxx.xxx.xxx -vv
+
+#Digging deeper with NSE Scripts
+
+#Scan using default safe scripts
+
+nmap -sV -sC 192.168.1.1
+
+#Get help for a script
+
+nmap --script-help=ssl-heartbleed
+
+#Scan using a specific NSE script
+
+nmap -sV -p 443 –script=ssl-heartbleed.nse 192.168.1.1
+
+#Scan with a set of scripts
+
+nmap -sV --script=smb* 192.168.1.1
+
+
+Hydra Password - Brute force
+
+#Basic Command
+hydra -l <user> -P passlist.txt ftp://xxx.xxx.xxx.xxx
+
+#SSH
+hydra -l <user> -P <full path to pass> xxx.xxx.xxx.xxx -t x(number of threads) ssh
+
+
+#Get/Post Web form
+hydra -l 
