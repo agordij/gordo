@@ -33,7 +33,7 @@ nmap --script-help=ssl-heartbleed
 
 #Scan using a specific NSE script
 
-nmap -sV -p 443 –script=ssl-heartbleed.nse 192.168.1.1
+nmap -sV -p 443 ï¿½script=ssl-heartbleed.nse 192.168.1.1
 
 #Scan with a set of scripts
 
@@ -51,3 +51,17 @@ hydra -l <user> -P <full path to pass> xxx.xxx.xxx.xxx -t x(number of threads) s
 
 #Get/Post Web form
 hydra -l 
+
+
+
+## Creating SSH Key for Github Repo
+ssh-keygen -t rsa -b 4096 -C "gordo_619@y7mail.com"
+
+# start the ssh-agent in the background
+$ eval "$(ssh-agent -s)"
+
+# Adding SSH Key to ssh-agent
+ssh-add -K ~/.ssh/id_rsa
+
+# Testing Authentication for Github
+ssh -T git@github.com

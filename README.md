@@ -2,8 +2,20 @@
 
 ## Basic Training
 
-Git Commands
-    - Clone
-    - Add
-    - Commit
-    - Pull / Push
+Git Commands:
+
+Status
+
+Clone
+
+Add
+
+Commit
+
+Pull / Push
+
+init 
+
+remote
+
+
