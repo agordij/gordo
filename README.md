@@ -18,4 +18,7 @@ init
 
 remote
 
+git branch
+
+git checkout -b <New Branch name>
 
